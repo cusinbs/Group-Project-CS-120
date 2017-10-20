@@ -154,12 +154,11 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(54, 54, 54)
-                        .addComponent(jLabel3)))
+                        .addComponent(jLabel3))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(jButton1)))
                 .addContainerGap(26, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(48, 48, 48))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -170,9 +169,9 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
-                .addGap(62, 62, 62)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addGap(35, 35, 35))
         );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -212,14 +211,13 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(jButton2)
-                        .addGap(55, 55, 55))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(64, 64, 64))))
+                .addGap(0, 66, Short.MAX_VALUE)
+                .addComponent(jLabel6)
+                .addGap(64, 64, 64))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addComponent(jButton2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -234,9 +232,9 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
-                .addGap(30, 30, 30)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton2)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addGap(35, 35, 35))
         );
 
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -287,11 +285,12 @@ public class NewJFrame extends javax.swing.JFrame {
                             .addComponent(jTextField14)))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(51, 51, 51)
-                        .addComponent(jLabel9))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(jButton3)))
+                        .addComponent(jLabel9)))
                 .addContainerGap(18, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton3)
+                .addGap(49, 49, 49))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -310,9 +309,9 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel19))
-                .addGap(18, 18, 18)
+                .addGap(26, 26, 26)
                 .addComponent(jButton3)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -322,8 +321,18 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel13.setText("Name");
 
         jTextField9.setName("txtFindName"); // NOI18N
+        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField9ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Find");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
@@ -424,6 +433,11 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jButton7.setText("Delete");
         jButton7.setName("btnDelete"); // NOI18N
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jTextArea3.setColumns(20);
         jTextArea3.setRows(5);
@@ -523,7 +537,6 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        jTextArea1.setText("");
         String print = "";
         for(int i = 0; i < employees.size(); i++){
             print += employees.get(i).toString() + "\n";
@@ -545,11 +558,102 @@ public class NewJFrame extends javax.swing.JFrame {
         clearTextField();
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        String name = jTextField9.getText();
+        String result ="";
+        boolean isFound = false;
+        for(int x = 0;x < employees.size();x++)
+        {
+            if(employees.get(x) instanceof SalariedEmployee)
+            {
+                SalariedEmployee employee = (SalariedEmployee)employees.get(x);
+                if(employee.getName().equals(name))
+                {
+                    isFound = true;
+                    result = employees.get(x).toString();
+                }
+            }
+            else if(employees.get(x) instanceof HourlyEmployee)
+            {
+                HourlyEmployee employee = (HourlyEmployee)employees.get(x);
+                if(employee.getName().equals(name))
+                {
+                    isFound = true;
+                    result = employees.get(x).toString();
+                }
+            }
+            else if(employees.get(x) instanceof CommissionedEmployee)
+            {
+                CommissionedEmployee employee = (CommissionedEmployee)employees.get(x);
+                if(employee.getName().equals(name))
+                {
+                    isFound = true;
+                    result = employees.get(x).toString();
+                }
+            }
+        }
+        if(!isFound){
+            result = "Employee not found.";
+        }
+        jTextArea2.setText(result);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField9ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+         ArrayList<Integer> possibilities = new ArrayList<Integer>(); // In case of multiple Employees of the same name
+        String name = jTextField15.getText();
+        String result = "";
+        boolean isFound = false;
+        for(int x = 0;x < employees.size();x++)
+        {
+            if(employees.get(x) instanceof SalariedEmployee)
+            {
+                SalariedEmployee employee = (SalariedEmployee)employees.get(x);
+                if(employee.getName().equals(name))
+                {
+                    isFound = true;
+                    employees.remove(x);
+                    result = "Employee removed";
+                }
+            }
+            else if(employees.get(x) instanceof HourlyEmployee)
+            {
+                HourlyEmployee employee = (HourlyEmployee)employees.get(x);
+                if(employee.getName().equals(name))
+                {
+                    isFound = true;
+                    employees.remove(x);
+                    result = "Employee removed";
+                }
+            }
+            else if(employees.get(x) instanceof CommissionedEmployee)
+            {
+                CommissionedEmployee employee = (CommissionedEmployee)employees.get(x);
+                if(employee.getName().equals(name))
+                {
+                    isFound = true;
+                    employees.remove(x);
+                    result = "Employee removed";
+                }
+            }
+        }
+        if(!isFound)
+        {
+            result = "Employee not found.";
+        }
+        jTextArea3.setText(result);
+    }//GEN-LAST:event_jButton7ActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public void clearTextField(){
-        jTextField1.setText("");
+        jTextField1.setText(Integer.valueOf(jTextField1.getText())+1+"");
         jTextField2.setText("");
         jTextField4.setText("");
         jTextField5.setText("");

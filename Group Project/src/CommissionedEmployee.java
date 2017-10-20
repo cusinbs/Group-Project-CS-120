@@ -39,8 +39,8 @@ public class CommissionedEmployee extends Employee{
     public String toString()
     {
         String str = super.toString() + 
-            "\n" + "BasePay:  " + this.basePay + "\t" + "Weekly Sales:  "+ this.weeklySales + "\t" + "CommissionRate:  " +
-            this.commissionRate + "\t" + "Total Pay:  " + this.findPay() + "\n";
+            "\n" + "BasePay:  " + this.basePay + "\n" + "Weekly Sales:  "+ this.weeklySales + "\n" + "CommissionRate:  " +
+            this.commissionRate + "\n" + "Total Pay:  " + this.findPay() + "\n";
         return str;
     }
     
